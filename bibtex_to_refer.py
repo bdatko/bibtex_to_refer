@@ -19,8 +19,6 @@ def main():
     
     args = parser.parse_args()
     
-    print(args.filename)
-    
     # get the bib database
     with open(args.filename, encoding='utf8') as bibtex_file:
         bib_database = bibtexparser.load(bibtex_file)
