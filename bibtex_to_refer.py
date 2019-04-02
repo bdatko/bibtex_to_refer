@@ -9,8 +9,6 @@ import argparse
 
 import bibtexparser
 
-import sys
-
 def main():
     # Purpose transform BibTex database into a bib refer database
     
@@ -122,10 +120,10 @@ def main():
                'volume' : volume,
                'annote' : annote,
                }
-    
-    size_of = sys.getsizeof(bib_database.entries)
-    print(size_of)
-    
+
+    # parse the bib entry into the new dict
+    # goal is to loop over the newly made dict and print the bib file
+
     for bib_entry in bib_database.entries:
         
         refer['keyword']()
@@ -151,16 +149,7 @@ def main():
         print("\n")
         refer_entry = dict.fromkeys(keys)
         
-        return
 
 if __name__ == '__main__':
     main()
     
-    
-    
-    
-    
-
-# parse the bib entry into the new dict
-
-# goal is to loop over the newly made dict and print the bib file
