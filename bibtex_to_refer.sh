@@ -3,8 +3,8 @@
 # ./biber_to_refer.sh input_filename.bib output_filename.bib
 
 # replaces the three letter month name with itself but quoted
-# example: jan, -> "jan",
-sed -i 's/\([jfmasond][aepueco][nbrylgptvc]\),/\"\1\",/g' $1
+# example: =  jan, -> =  "jan",
+sed -i 's/=  \(\b[jfmasond][aepueco][nbrylgptvc]\),/=  \"\1\",/g' $1
 
 # replaces \url with url
 sed -i 's/\\url/url/g' $1
